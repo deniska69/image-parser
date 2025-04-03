@@ -8,3 +8,11 @@ export const readFile = (): string[][] => {
 	const parsedFile = parser.typedArrs(decodedString);
 	return parsedFile;
 };
+
+export const getTitle = (file: string[][], row: number) => {
+	return file[row]?.length ? file[row][0] : undefined;
+};
+
+export const getUrl = (file: string[][], row: number) => {
+	return file[row]?.length ? file[row][1] : undefined;
+};
